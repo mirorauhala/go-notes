@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"net/http"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	registerRoutes()
+
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
